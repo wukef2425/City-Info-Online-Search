@@ -1,6 +1,12 @@
-# city_info_online_search
+# CITY INFO ONLINE SEARCH
 
-This platform integrates Google Maps, WeatherAPI, GeoDB Cities API and the Wikipedia search API to create a one-stop search engine for city-related information.
+[This platform](https://github.com/wukef2425/city_info_online_search) integrates Google Maps, WeatherAPI, GeoDB Cities API and the Wikipedia search API to create a one-stop search engine for city-related information.
+
+![Project UI](./docs/images/projectUI.png)
+
+## Design and Implementation
+
+See ["Design & Implementation"](./docs/Design%20&%20Implementation.md).
 
 ## System Requirements
 
