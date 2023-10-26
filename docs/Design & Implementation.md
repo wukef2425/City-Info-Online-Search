@@ -101,10 +101,6 @@ Instead of using `props`, we use `Vuex` for the following reasons:
 
 4. **MediaWiki API**: This API fetches relevant Wikipedia articles for the chosen city, providing brief summaries. [API Documentation](https://rapidapi.com/dfskGT/api/wiki-briefs/)
 
-## Implementation
-
-`CITY INFO ONLINE SEARCH` is built using `Vue.js`, taking advantage of its component-based architecture to create reusable and manageable pieces of code. For fetching data from various APIs, we used `Axios`, a promise-based HTTP client for the browser and Node.js.
-
 ## Robustness and Data Consistency in Code Design
 
 1. **Error Handling and Graceful Degradation:** 
@@ -166,6 +162,10 @@ The application uses Vuex to manage shared state and ensure data consistency acr
 ```
 
 This shows a separation of concerns - the component is responsible for displaying its own data, while Vuex is used for fetching and storing shared data. This design pattern contributes to the robustness and maintainability of the application.
+
+## Implementation
+
+`CITY INFO ONLINE SEARCH` is built using `Vue.js`, taking advantage of its component-based architecture to create reusable and manageable pieces of code. For fetching data from various APIs, we used `Axios`, a promise-based HTTP client for the browser and Node.js.
 
 ### Configuration and deployment
 
