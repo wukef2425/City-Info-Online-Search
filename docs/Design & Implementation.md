@@ -4,7 +4,7 @@
 
 `CITY INFO ONLINE SEARCH` is a one-stop search engine for city-related information, which integrates data from a variety of Web APIs to provide comprehensive information about any city the user wishes to explore. 
 
-![Project UI](../images/projectUI.png)
+![Project UI](../docs/images/projectUI.png)
 
 ## Project Design
 
@@ -16,6 +16,24 @@ The `HelloWorld` view in the Vue.js application is structured using three main c
 ### Component Details
 
 - **MapComponent:** Utilizes Google's Maps Embed API to display 2 maps of the selected city. One map uses the latitude and longitude data stored in Vuex to find the city, while the other uses the city name. This dual method provides a more robust and accurate representation of the city.
+
+```javascript
+computed: {
+    mapViewUrl() {
+      console.log(this.$store.state.location)
+      const { lat, lon } = this.$store.state.location;
+      return `https://www.google.com/maps/embed/v1/view?key=${googleKey}
+              &center=${lat},${lon}
+              &zoom=12
+              &maptype=satellite`;
+    },
+    mapPlaceUrl() {
+      const place = this.$store.state.city;
+      return `https://www.google.com/maps/embed/v1/place?key=${googleKey}
+              &q=${place}`;
+    }
+  }
+```
 
 - **WeatherComponent:** Utilizes the WeatherAPI to fetch and display weather information. It shows the last updated time, the ultraviolet index, temperature, and wind speed, with options to toggle between units.
 
@@ -59,7 +77,7 @@ Instead of using `props`, we use `Vuex` for the following reasons:
 
 3. **Reducing Component Coupling:** Using Vuex reduces the coupling between components, making the components more reusable and testable.
 
-![Using Vuex](../images/vuex.png)
+![Using Vuex](../docs/images/vuex.png)
 
 ### User Interaction and Data Flow
 
